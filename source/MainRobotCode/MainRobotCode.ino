@@ -1,11 +1,12 @@
 //Setting up variable names and their respective pins
-int const DMR1 = 2;  //Drive Motor Right 1 (front)
-int const DMR2 = 3;  //Drive Motor Right 2 (back)
-int const DML1 = 4;  //Drive Motor Left 1 (front)
-int const DML2 = 5;  //Drive Motor left 2 (back)
-int const AM = 6;    //Auger Motor
-int const ACT = 7;   //Actuator Motor
-
+int const SPR1 = 2;  //Speed Front Right Wheel 
+int const SPR2 = 3;  //Speed Rear Right Wheel 
+int const SPL1 = 4;  //Speed Front Left Wheel
+int const SPL2 = 5;  //Speed Rear Left Wheel
+int const DIRR1 = 23; //Direction FR Wheel
+int const DIRR2 = 25; //Direction RR Wheel  
+int const DIRL1 = 27; //Direction FL Wheel
+int const DIRL2 = 29; //Direction RL Wheel
 
 void setup(){
   

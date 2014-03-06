@@ -1,0 +1,11 @@
+FACING DOWN
+
+BLACK | GREEN | BLUE | RED
+
+need about 13 v .24A...
+remeber current limit is 1.6A!!!
+velocity and speed --- not too hight!!
+if python raises and exception, make sure that it closes the ports properly!! OR else... WONT CONNECT ANYMORE!
+
+
+

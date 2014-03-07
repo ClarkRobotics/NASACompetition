@@ -5,6 +5,7 @@
 # Libraries
 *.lib
 *.a
+*.settings
 
 # Shared objects (inc. Windows DLLs)
 *.dll

@@ -2,7 +2,7 @@
 
 """Copyright 2010 Phidgets Inc.
 This work is licensed under the Creative Commons Attribution 2.5 Canada License. 
-To view a copy of this license, visit http://creativecommons.org/licenses/by/2.5/ca/
+To view a copy of this license, visit http://cre3ativecommons.org/licenses/by/2.5/ca/
 """
 
 __author__ = 'Adam Stelmack'
@@ -97,8 +97,8 @@ try:
     #pass
     #stepper.waitForAttach(1000) #10000
     #stepper.closePhidget()
-    stepper.waitForAttach(500)
-    #stepper.waitForAttach(1000)
+    stepper.waitForAttach(10000)
+    #stepper.waitForAttach(10000)
 except PhidgetException as e:
     print("Phidget Exception %i: %s" % (e.code, e.details))
     try:
@@ -122,21 +122,22 @@ try:
     stepper.setEngaged(0, True)
     sleep(1)
 
-    
     print("The motor will run until it reaches the set goal position...")
     
     stepper.setAcceleration(0, 300000)   #87,543 120,536
     stepper.setVelocityLimit(0, 250000) #6200 414287 250000=MAX
-    stepper.setCurrentLimit(0, 1.00) #.26 #MAX 1.6
+    stepper.setCurrentLimit(0, 1.60) #.26 #MAX 1.6
     sleep(2)# 2
     
     print("Will now move to position 20000...")
     stepper.setTargetPosition(0, 10*318000)# 400000=MORE THAN 1
-    try:
-        while (stepper.getCurrentPosition(0) != 400000):
+    while (stepper.getCurrentPosition(0) != 400000):
+        try:
             pass
-    except KeyboardInterrupt:
-        print("key was pressed!!!")
+        except KeyboardInterrupt:
+            print("key was pressed!!!")
+            exit(1)
+            break
     #sleep(.1)
     
     #print("Will now move back to positon 0...")
